@@ -11,10 +11,5 @@ The Indices of Deprivation 2025 (IoD25) provide a set of relative measures of de
 \author{
 \strong{Maintainer}: Douglas Munro \email{douglas@douglasmunro.co.uk} (\href{https://orcid.org/0009-0005-6533-6423}{ORCID}) [copyright holder]
 
-Authors:
-\itemize{
-  \item Douglas Munro \email{douglas@douglasmunro.co.uk} (\href{https://orcid.org/0009-0005-6533-6423}{ORCID}) [copyright holder]
-}
-
 }
 \keyword{internal}
