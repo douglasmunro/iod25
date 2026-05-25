@@ -1,6 +1,6 @@
 Package: iod25
 Title: English Indices of Deprivation (IoD25)
-Version: 0.0.0.9001
+Version: 0.0.0.9002
 Authors@R: 
     person("Douglas", "Munro", , "douglas@douglasmunro.co.uk", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0005-6533-6423"))
