@@ -36,4 +36,4 @@ domains <- vroom::vroom(
     domain = as.factor(domain)
   )
 
-usethis::use_data(domains, overwrite = TRUE)
+usethis::use_data(domains, overwrite = TRUE, compress = "xz")
