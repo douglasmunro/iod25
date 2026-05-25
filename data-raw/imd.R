@@ -1,0 +1,17 @@
+path <- "./data-raw/2025_index_of_multiple_deprivation.csv"
+
+imd <- vroom::vroom(
+  path,
+  .name_repair = janitor::make_clean_names
+) |>
+  dplyr::rename(
+    lad_code = local_authority_district_code,
+    lad_name = local_authority_district_name,
+    imd_rank = index_of_multiple_deprivation_rank,
+    imd_decile = index_of_multiple_deprivation_decile
+  ) |>
+  dplyr::mutate(
+    dplyr::across(dplyr::where(is.double), as.integer)
+  )
+
+usethis::use_data(imd, overwrite = TRUE, compress = "xz")

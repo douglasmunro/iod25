@@ -1,16 +1,22 @@
 Package: iod25
 Title: English Indices of Deprivation (IoD25)
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person("Douglas", "Munro", , "douglas@douglasmunro.co.uk", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0005-6533-6423"))
-Description: The Indices of Deprivation 2025 (IoD25) provide a set of relative measures of deprivation 
-  for small areas (Lower-layer Super Output Areas) across England, based on seven domains of deprivation.
-   Contains public sector information licensed under the Open Government Licence v3.0.
+Description: The Indices of Deprivation 2025 (IoD25) provide a set of
+    relative measures of deprivation for small areas (Lower-layer Super
+    Output Areas) across England, based on seven domains of deprivation.
+    Contains public sector information licensed under the Open Government
+    Licence v3.0.
 License: MIT + file LICENSE
+Depends: 
+    R (>= 3.5)
+Suggests: 
+    spelling,
+    tibble
 Encoding: UTF-8
+Language: en-GB
+LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 8.0.0
-Suggests: 
-    spelling
-Language: en-GB
