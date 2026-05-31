@@ -1,5 +1,9 @@
-The iod25 package code is distributed under MIT. The iod25 package data is distributed under OGLv3.0:
+This package is licensed under the Creative Commons Attribution 4.0 International License (CC-BY 4.0).
+
+The data in this package are an adaptation of public sector information
+licensed under the Open Government Licence v3.0 (OGL-3.0).
 
 Contains public sector information licensed under the Open Government Licence v3.0.
+Source: Ministry of Housing, Communities and Local Government (© Crown copyright).
 
 A full copy of the OGLv3.0 license is included in `inst/iod`.
