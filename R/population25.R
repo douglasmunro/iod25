@@ -8,7 +8,7 @@
 #'    provided in a '[tidy data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)' format.
 #'    Contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/?utm_source=copilot.com).
 #'
-#' 
+#'
 #' @format A tibble with 135,020 rows and 6 variables:
 #' \describe{
 #'   \item{lsoa_code}{Identifiers of 2021 Census Geography boundaries (Lower Layer Super Output Areas)}
