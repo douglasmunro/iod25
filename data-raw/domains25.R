@@ -12,7 +12,7 @@ domains25 <- vroom::vroom(
   ) |>
   tidyr::pivot_longer(
     cols = "index_of_multiple_deprivation_score":"living_environment_decile",
-    names_to = c("domain", "type"),
+    names_to = c("measure_name", "type"),
     names_pattern = "(.*)_(.*)"
   ) |>
   tidyr::pivot_wider(
@@ -22,21 +22,22 @@ domains25 <- vroom::vroom(
   dplyr::mutate(
     rank = as.integer(rank),
     decile = as.integer(decile),
-    domain = dplyr::case_when(
-      domain ==
+    measure_type = factor("index", levels = c("index", "domain", "subdomain")),
+    measure_name = dplyr::case_when(
+      measure_name ==
         "index_of_multiple_deprivation" ~ "Index of Multiple Deprivation",
-      domain == "income" ~ "Income Deprivation",
-      domain == "employment" ~ "Employment Deprivation",
-      domain ==
+      measure_name == "income" ~ "Income Deprivation",
+      measure_name == "employment" ~ "Employment Deprivation",
+      measure_name ==
         "education_skills_and_training" ~ "Education, Skills and Training Deprivation",
-      domain ==
+      measure_name ==
         "health_deprivation_and_disability" ~ "Health Deprivation and Disability",
-      domain == "crime" ~ "Crime",
-      domain ==
+      measure_name == "crime" ~ "Crime",
+      measure_name ==
         "barriers_to_housing_and_services" ~ "Barriers to Housing and Services",
-      domain == "living_environment" ~ "Living Environment Deprivation"
+      measure_name == "living_environment" ~ "Living Environment Deprivation"
     ),
-    domain = as.factor(domain)
+    .after = "lad_name"
   ) |>
   dplyr::relocate("score", .after = "decile")
 

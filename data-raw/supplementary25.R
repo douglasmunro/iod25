@@ -12,7 +12,7 @@ supplementary25 <- vroom::vroom(
   ) |> 
    tidyr::pivot_longer(
     cols = !c("lsoa_code":"lad_name"),
-    names_to = c("index", "type"),
+    names_to = c("measure_name", "type"),
     names_pattern = "(.*)_(.*)"
   ) |>
   tidyr::pivot_wider(
@@ -22,8 +22,10 @@ supplementary25 <- vroom::vroom(
   dplyr::mutate(
     rank = as.integer(rank),
     decile = as.integer(decile),
-    index = stringr::str_to_upper(index) |>
-      as.factor()
+        measure_type = factor("index", levels = c("index", "domain", "subdomain")),
+    measure_name = stringr::str_to_upper(measure_name) ,
+        measure_type = factor("index", levels = c("index", "domain", "subdomain")),
+        .after = "lad_name"
   ) |>
   dplyr::relocate("score", .after = "decile")
 
