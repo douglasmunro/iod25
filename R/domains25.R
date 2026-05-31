@@ -12,6 +12,7 @@
 #'   \item{domain}{Domain of deprivation}
 #'   \item{rank}{Domain Rank (where 1 is most deprived)}
 #'   \item{decile}{Domain Decile (where 1 is most deprived 10% of LSOAs)")}
+#'   \item{score}{Domain Score")}
 #' }
 #' @source MHCLG: [Domains of deprivation](https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/csvw/)
 "domains25"

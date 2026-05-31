@@ -1,7 +1,9 @@
-path <- "./data-raw/2025_domains_of_deprivation.csv"
+path <- "./data-raw/2025_all_iod_scores_ranks_deciles.csv"
 
 domains25 <- vroom::vroom(
   path,
+  col_select = c("lsoa_code":"living_environment_decile"),
+  show_col_types = FALSE,
   .name_repair = janitor::make_clean_names
 ) |>
   dplyr::rename(
@@ -9,7 +11,7 @@ domains25 <- vroom::vroom(
     lad_name = local_authority_district_name
   ) |>
   tidyr::pivot_longer(
-    cols = "index_of_multiple_deprivation_rank":"living_environment_decile",
+    cols = "index_of_multiple_deprivation_score":"living_environment_decile",
     names_to = c("domain", "type"),
     names_pattern = "(.*)_(.*)"
   ) |>
@@ -18,7 +20,8 @@ domains25 <- vroom::vroom(
     values_from = "value"
   ) |>
   dplyr::mutate(
-    dplyr::across(dplyr::where(is.double), as.integer),
+    rank = as.integer(rank),
+    decile = as.integer(decile),
     domain = dplyr::case_when(
       domain ==
         "index_of_multiple_deprivation" ~ "Index of Multiple Deprivation",
@@ -34,6 +37,7 @@ domains25 <- vroom::vroom(
       domain == "living_environment" ~ "Living Environment Deprivation"
     ),
     domain = as.factor(domain)
-  )
+  ) |> 
+  dplyr::relocate("score", .after = "decile")
 
 usethis::use_data(domains25, overwrite = TRUE, compress = "xz")

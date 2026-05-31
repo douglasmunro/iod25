@@ -14,6 +14,7 @@ A tibble with 270,040 rows and 7 variables:
 \item{domain}{Domain of deprivation}
 \item{rank}{Domain Rank (where 1 is most deprived)}
 \item{decile}{Domain Decile (where 1 is most deprived 10\% of LSOAs)")}
+\item{score}{Domain Score")}
 }
 }
 \source{
