@@ -2,7 +2,11 @@ path <- "./data-raw/2025_all_iod_scores_ranks_deciles.csv"
 
 imd25 <- vroom::vroom(
   path,
-  col_select = c(dplyr::starts_with("LSOA"), dplyr::starts_with("Local"), dplyr::starts_with("Index")),
+  col_select = c(
+    dplyr::starts_with("LSOA"),
+    dplyr::starts_with("Local"),
+    dplyr::starts_with("Index")
+  ),
   .name_repair = janitor::make_clean_names,
   show_col_types = FALSE
 ) |>
@@ -16,7 +20,7 @@ imd25 <- vroom::vroom(
   dplyr::mutate(
     rank = as.integer(rank),
     decile = as.integer(decile)
-  ) |> 
+  ) |>
   dplyr::relocate("score", .after = "decile")
 
 usethis::use_data(imd25, overwrite = TRUE, compress = "xz")

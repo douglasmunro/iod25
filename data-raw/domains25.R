@@ -37,7 +37,7 @@ domains25 <- vroom::vroom(
       domain == "living_environment" ~ "Living Environment Deprivation"
     ),
     domain = as.factor(domain)
-  ) |> 
+  ) |>
   dplyr::relocate("score", .after = "decile")
 
 usethis::use_data(domains25, overwrite = TRUE, compress = "xz")
