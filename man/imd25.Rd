@@ -13,6 +13,7 @@ A tibble with 33,755 rows and 6 variables:
 \item{lad_name}{Names for local authority districts (LAD) and unitary authorities (UA) in the United Kingdom as at 2024}
 \item{rank}{Index of Multiple Deprivation (IMD) Rank (where 1 is most deprived)}
 \item{decile}{Index of Multiple Deprivation (IMD) Decile (where 1 is most deprived 10\% of LSOAs)")}
+\item{score}{Index of Multiple Deprivation (IMD) Score")}
 }
 }
 \source{
