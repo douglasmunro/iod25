@@ -8,6 +8,14 @@
 \description{
 The Indices of Deprivation 2025 (IoD25) provide a set of relative measures of deprivation for small areas (Lower-layer Super Output Areas) across England, based on seven domains of deprivation. Contains public sector information licensed under the Open Government Licence v3.0.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/douglasmunro/iod25}
+  \item Report bugs at \url{https://github.com/douglasmunro/iod25/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Douglas Munro \email{douglas@douglasmunro.co.uk} (\href{https://orcid.org/0009-0005-6533-6423}{ORCID}) [copyright holder]
 
