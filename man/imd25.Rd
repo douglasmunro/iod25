@@ -5,15 +5,17 @@
 \alias{imd25}
 \title{Index of Multiple Deprivation (IMD) 2025}
 \format{
-A tibble with 33,755 rows and 7 variables:
+A tibble with 33,755 rows and 9 variables:
 \describe{
 \item{lsoa_code}{Identifiers of 2021 Census Geography boundaries (Lower Layer Super Output Areas)}
 \item{lsoa_name}{Names of 2021 Census Geography boundaries (Lower Layer Super Output Areas)}
 \item{lad_code}{Identifiers for local authority districts (LAD) and unitary authorities (UA) in the United Kingdom as at 2024}
 \item{lad_name}{Names for local authority districts (LAD) and unitary authorities (UA) in the United Kingdom as at 2024}
-\item{rank}{Index of Multiple Deprivation (IMD) Rank (where 1 is most deprived)}
-\item{decile}{Index of Multiple Deprivation (IMD) Decile (where 1 is most deprived 10\% of LSOAs)}
-\item{score}{Index of Multiple Deprivation (IMD) Score}
+\item{measure_type}{Measure type (index, domain or subdomain)}
+\item{measure_name}{Measure name}
+\item{rank}{Measure rank (where 1 is most deprived)}
+\item{decile}{Measure decile (where 1 is most deprived 10\% of LSOAs)}
+\item{score}{Measure score}
 }
 }
 \source{

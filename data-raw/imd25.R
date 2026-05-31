@@ -15,11 +15,14 @@ imd25 <- vroom::vroom(
     lad_name = local_authority_district_name,
     rank = index_of_multiple_deprivation_rank,
     decile = index_of_multiple_deprivation_decile,
-    score = index_of_multiple_deprivation_score
+    score = index_of_multiple_deprivation_score,
   ) |>
   dplyr::mutate(
+    measure_type = factor("index", levels = c("index", "domain", "subdomain")),
+    measure_name = "IMD",
     rank = as.integer(rank),
-    decile = as.integer(decile)
+    decile = as.integer(decile),
+    .after = "lad_name"
   ) |>
   dplyr::relocate("score", .after = "decile")
 

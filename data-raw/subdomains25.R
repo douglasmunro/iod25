@@ -15,7 +15,7 @@ subdomains25 <- vroom::vroom(
   ) |>
   tidyr::pivot_longer(
     cols = !c("lsoa_code":"lad_name"),
-    names_to = c("subdomain", "type"),
+    names_to = c("measure_name", "type"),
     names_pattern = "(.*)_(.*)"
   ) |>
   tidyr::pivot_wider(
@@ -25,10 +25,11 @@ subdomains25 <- vroom::vroom(
   dplyr::mutate(
     rank = as.integer(rank),
     decile = as.integer(decile),
-    subdomain = stringr::str_remove(subdomain, "_sub_domain") |>
+    measure_type = factor("subdomain", levels = c("index", "domain", "subdomain")),
+    measure_name = stringr::str_remove(measure_name, "_sub_domain") |>
       stringr::str_replace_all("_", " ") |>
-      stringr::str_to_title() |>
-      as.factor()
+      stringr::str_to_title(),
+    .after = "lad_name" 
   ) |>
   dplyr::relocate("score", .after = "decile")
 
