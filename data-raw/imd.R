@@ -7,8 +7,8 @@ imd <- vroom::vroom(
   dplyr::rename(
     lad_code = local_authority_district_code,
     lad_name = local_authority_district_name,
-    imd_rank = index_of_multiple_deprivation_rank,
-    imd_decile = index_of_multiple_deprivation_decile
+    rank = index_of_multiple_deprivation_rank,
+    decile = index_of_multiple_deprivation_decile
   ) |>
   dplyr::mutate(
     dplyr::across(dplyr::where(is.double), as.integer)
