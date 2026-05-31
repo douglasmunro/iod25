@@ -5,7 +5,7 @@
 \alias{domains25}
 \title{Domains of deprivation 2025}
 \format{
-A tibble with 270,040 rows and 7 variables:
+A tibble with 270,040 rows and 8 variables:
 \describe{
 \item{lsoa_code}{Identifiers of 2021 Census Geography boundaries (Lower Layer Super Output Areas)}
 \item{lsoa_name}{Names of 2021 Census Geography boundaries (Lower Layer Super Output Areas)}

@@ -24,7 +24,7 @@ MHCLG, \href{https://open-data.communities.gov.uk/datasets/indices-of-deprivatio
 subdomains25
 }
 \description{
-This dataset contains the the sub-domains at Lower-layer Super Output Area (LSOA) level.
+This dataset contains the sub-domains at Lower-layer Super Output Area (LSOA) level.
 }
 \details{
 The dataset contains Ministry of Housing, Communities and Local Government (MHCLG) IoD data,

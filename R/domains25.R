@@ -9,7 +9,7 @@
 #'    Contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/?utm_source=copilot.com).
 #'
 #'
-#' @format A tibble with 270,040 rows and 7 variables:
+#' @format A tibble with 270,040 rows and 8 variables:
 #' \describe{
 #'   \item{lsoa_code}{Identifiers of 2021 Census Geography boundaries (Lower Layer Super Output Areas)}
 #'   \item{lsoa_name}{Names of 2021 Census Geography boundaries (Lower Layer Super Output Areas)}

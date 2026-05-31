@@ -5,7 +5,7 @@
 \alias{imd25}
 \title{Index of Multiple Deprivation (IMD) 2025}
 \format{
-A tibble with 33,755 rows and 6 variables:
+A tibble with 33,755 rows and 7 variables:
 \describe{
 \item{lsoa_code}{Identifiers of 2021 Census Geography boundaries (Lower Layer Super Output Areas)}
 \item{lsoa_name}{Names of 2021 Census Geography boundaries (Lower Layer Super Output Areas)}
