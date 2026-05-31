@@ -1,6 +1,6 @@
 path <- "./data-raw/2025_domains_of_deprivation.csv"
 
-domains <- vroom::vroom(
+domains25 <- vroom::vroom(
   path,
   .name_repair = janitor::make_clean_names
 ) |>
@@ -36,4 +36,4 @@ domains <- vroom::vroom(
     domain = as.factor(domain)
   )
 
-usethis::use_data(domains, overwrite = TRUE, compress = "xz")
+usethis::use_data(domains25, overwrite = TRUE, compress = "xz")

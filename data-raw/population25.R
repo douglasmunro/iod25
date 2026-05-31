@@ -1,6 +1,6 @@
 path <- "./data-raw/2025_all_iod_scores_ranks_deciles.csv"
 
-population_denominators <- vroom::vroom(
+population25 <- vroom::vroom(
   path,
   .name_repair = janitor::make_clean_names
 ) |>
@@ -31,4 +31,4 @@ population_denominators <- vroom::vroom(
       as.factor()
   )
 
-usethis::use_data(population_denominators, overwrite = TRUE, compress = "xz")
+usethis::use_data(population25, overwrite = TRUE, compress = "xz")

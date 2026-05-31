@@ -1,4 +1,4 @@
-#' Domains of deprivation
+#' Domains of deprivation 2025
 #'
 #' This dataset contains the Index of Multiple Deprivation 2025 (IMD 2025) 
 #'   and the seven domains at Lower-layer Super Output Area (LSOA) level.
@@ -14,4 +14,4 @@
 #'   \item{decile}{Domain Decile (where 1 is most deprived 10% of LSOAs)")}
 #' }
 #' @source MHCLG: [Domains of deprivation](https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/csvw/)
-"domains"
+"domains25"

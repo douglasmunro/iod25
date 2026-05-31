@@ -1,6 +1,6 @@
 path <- "./data-raw/2025_index_of_multiple_deprivation.csv"
 
-imd <- vroom::vroom(
+imd25 <- vroom::vroom(
   path,
   .name_repair = janitor::make_clean_names
 ) |>
@@ -14,4 +14,4 @@ imd <- vroom::vroom(
     dplyr::across(dplyr::where(is.double), as.integer)
   )
 
-usethis::use_data(imd, overwrite = TRUE, compress = "xz")
+usethis::use_data(imd25, overwrite = TRUE, compress = "xz")

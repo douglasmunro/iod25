@@ -1,4 +1,4 @@
-#' Index of Multiple Deprivation (IMD)
+#' Index of Multiple Deprivation (IMD)2025
 #'
 #' This dataset contains the ranks and deciles for the
 #'   Index of Multiple Deprivation 2025 (IMD25) at Lower-layer Super Output Area (LSOA) level.
@@ -13,4 +13,4 @@
 #'   \item{decile}{Index of Multiple Deprivation (IMD) Decile (where 1 is most deprived 10% of LSOAs)")}
 #' }
 #' @source MHCLG: [Index of Multiple Deprivation](https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/)
-"imd"
+"imd25"

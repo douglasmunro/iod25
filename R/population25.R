@@ -1,4 +1,4 @@
-#' Population denominators
+#' Population denominators 2025
 #'
 #' This dataset contains the population denominators used to create the Indices of Deprivation 2025 (IoD25).
 #'  The populations are derived from the mid-2022 ONS population estimates.
@@ -13,4 +13,4 @@
 #'   \item{population}{Population}
 #' }
 #' @source MHCLG: [All scores, ranks and deciles](https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/csvw/)
-"population_denominators"
+"population25"
