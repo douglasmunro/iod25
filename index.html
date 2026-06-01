@@ -11,8 +11,8 @@
 <script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="English Indices of Deprivation (IoD25)">
-<meta name="description" content="Data package containing the Indices of Deprivation 2025 (IoD25). Iod25 provide a set of relative measures of deprivation for small areas (Lower-layer Super Output Areas) across England. Contains public sector information licensed under the Open Government Licence v3.0.">
-<meta property="og:description" content="Data package containing the Indices of Deprivation 2025 (IoD25). Iod25 provide a set of relative measures of deprivation for small areas (Lower-layer Super Output Areas) across England. Contains public sector information licensed under the Open Government Licence v3.0.">
+<meta name="description" content="Data package containing the Indices of Deprivation 2025 (IoD25). Iod25 provide a set of relative measures of deprivation for small areas (Lower-layer Super Output Areas) across England.">
+<meta property="og:description" content="Data package containing the Indices of Deprivation 2025 (IoD25). Iod25 provide a set of relative measures of deprivation for small areas (Lower-layer Super Output Areas) across England.">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -50,14 +50,71 @@
 </h1></div>
 <!-- badges: start -->
 
-<!-- badges: end -->
-<p>The goal of iod25 is to provide R users with easier access to the English Indices of Deprivation 2025 (IoD25).</p>
+<p>The goal of iod25 is to provide R users with easier access to the English Indices of Deprivation 2025.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"douglasmunro/iod25"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="about-the-data">About the data<a class="anchor" aria-label="anchor" href="#about-the-data"></a>
+</h2>
+<p>The Indices of Deprivation 2025 (IoD25) measure relative deprivation across small geographic areas in England.</p>
+<p>IoD25 is formed from 7 domains which measure different aspects of deprivation, one combined Index of Multiple Deprivation (IMD) and 2 supplementary indices.</p>
+<p>The iod25 package is made up of 3 core datasets:</p>
+<ul>
+<li>
+<code>domains</code> contains the 7 domain measures</li>
+<li>
+<code>imd</code> contains the Index of Multiple Deprivation</li>
+<li>
+<code>supplementary</code> contains the 2 supplementary indices</li>
+</ul>
+<p>And two additional datasets:</p>
+<ul>
+<li>
+<code>subdomains</code> contains the underlying measures used to construct the domains</li>
+<li>
+<code>population</code> contains the population denominators used to construct the indices</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
+</h2>
+<p>The package data are available under <a href="https://creativecommons.org/licenses/by/4.0/deed.en" class="external-link">CC BY 4.0</a> license and are modified versions of Ministry of Housing, Communities &amp; Local Government (MHCLG) data.</p>
+<p>The source data is licenced under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="external-link">Open Government Licence v3.0. (OGLv3.0)</a>.</p>
+</div>
+<div class="section level2">
+<h2 id="disclaimer">Disclaimer<a class="anchor" aria-label="anchor" href="#disclaimer"></a>
+</h2>
+<p>This package is not associated with or endorsed by MHCLG.</p>
+</div>
+<div class="section level2">
+<h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
+</h2>
+<p>To cite the iod25 package, please use:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"iod25"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; To cite package 'iod25' in publications use:</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   Munro D (2026). _iod25: English Indices of Deprivation (IoD25)_. R</span></span>
+<span><span class="co">#&gt;   package version 0.0.0.9006, &lt;https://github.com/douglasmunro/iod25&gt;.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   @Manual{,</span></span>
+<span><span class="co">#&gt;     title = {iod25: English Indices of Deprivation (IoD25)},</span></span>
+<span><span class="co">#&gt;     author = {Douglas Munro},</span></span>
+<span><span class="co">#&gt;     year = {2026},</span></span>
+<span><span class="co">#&gt;     note = {R package version 0.0.0.9006},</span></span>
+<span><span class="co">#&gt;     url = {https://github.com/douglasmunro/iod25},</span></span>
+<span><span class="co">#&gt;   }</span></span></code></pre></div>
+<p>To cite the source data, please use:</p>
+<ul>
+<li>Ministry of Housing, Communities &amp; Local Government (MHCLG), Indices of Multiple Deprivation 2025, (2025). Available at: <a href="https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/" class="external-link uri">https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/</a> (Accessed: 25 May 2025). Licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="external-link">Open Government Licence v3.0</a>.</li>
+</ul>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">

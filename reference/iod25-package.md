@@ -1,15 +1,14 @@
 # iod25: English Indices of Deprivation (IoD25)
 
-The Indices of Deprivation 2025 (IoD25) provide a set of relative
-measures of deprivation for small areas (Lower-layer Super Output Areas)
-across England, based on seven domains of deprivation. Contains public
-sector information licensed under the Open Government Licence v3.0.
+Data package containing the Indices of Deprivation 2025 (IoD25). Iod25
+provide a set of relative measures of deprivation for small areas
+(Lower-layer Super Output Areas) across England.
 
 ## See also
 
 Useful links:
 
-- <https://github.com/douglasmunro/iod25>
+- <https://douglasmunro.github.io/iod25/>
 
 - Report bugs at <https://github.com/douglasmunro/iod25/issues>
 
