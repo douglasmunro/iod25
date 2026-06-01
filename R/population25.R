@@ -18,5 +18,5 @@
 #'   \item{population_group}{Population group}
 #'   \item{population}{Population}
 #' }
-#' @source MHCLG, [All scores, ranks and deciles](https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/csvw/).
+#' @source Ministry of Housing, Communities & Local Government (MHCLG), Indices of Multiple Deprivation 2025, (2025). Available at: [https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/](https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/) (Accessed: 25 May 2025). Licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 "population25"

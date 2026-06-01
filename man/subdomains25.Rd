@@ -19,7 +19,7 @@ A tibble with 202,530 rows and 9 variables:
 }
 }
 \source{
-MHCLG, \href{https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/csvw/}{All scores, ranks and deciles}.
+Ministry of Housing, Communities & Local Government (MHCLG), Indices of Multiple Deprivation 2025, (2025). Available at: \url{https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/} (Accessed: 25 May 2025). Licensed under the \href{https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/}{Open Government Licence v3.0}.
 }
 \usage{
 subdomains25
