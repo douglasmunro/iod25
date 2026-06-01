@@ -55,8 +55,11 @@ A tibble with 270,040 rows and 9 variables:
 
 ## Source
 
-MHCLG, [All scores, ranks and
-deciles](https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/csvw/).
+Ministry of Housing, Communities & Local Government (MHCLG), Indices of
+Multiple Deprivation 2025, (2025). Available at:
+<https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/>
+(Accessed: 25 May 2025). Licensed under the [Open Government Licence
+v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 
 ## Details
 
