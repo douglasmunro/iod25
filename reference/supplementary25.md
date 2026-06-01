@@ -65,9 +65,5 @@ v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 
 ## Details
 
-The dataset contains Ministry of Housing, Communities and Local
-Government (MHCLG) IoD data, provided in a '[tidy
-data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)'
-format. Contains public sector information licensed under the [Open
-Government Licence
-v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/?utm_source=copilot.com).
+The data has been extracted from the All scores, ranks and deciles
+source file and transformed into into a long ('tidy') format.
