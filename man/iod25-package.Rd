@@ -6,7 +6,7 @@
 \alias{iod25-package}
 \title{iod25: English Indices of Deprivation (IoD25)}
 \description{
-Data package containing the Indices of Deprivation 2025 (IoD25). Iod25 provide a set of relative measures of deprivation for small areas (Lower-layer Super Output Areas) across England. Contains public sector information licensed under the Open Government Licence v3.0.
+Data package containing the Indices of Deprivation 2025 (IoD25). Iod25 provide a set of relative measures of deprivation for small areas (Lower-layer Super Output Areas) across England.
 }
 \seealso{
 Useful links:
