@@ -28,8 +28,6 @@ subdomains25
 This dataset contains the sub-domains at Lower-layer Super Output Area (LSOA) level.
 }
 \details{
-The dataset contains Ministry of Housing, Communities and Local Government (MHCLG) IoD data,
-provided in a '\href{https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html}{tidy data}' format.
-Contains public sector information licensed under the \href{https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/?utm_source=copilot.com}{Open Government Licence v3.0}.
+The data has been extracted from the All scores, ranks and deciles source file and transformed into into a long ('tidy') format.
 }
 \keyword{datasets}

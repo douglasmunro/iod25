@@ -29,8 +29,6 @@ This dataset contains the supplementary indices of deprivation at Lower-layer Su
 The supplementary indices are the Income Deprivation Affecting Children Index (IDACI) and the Income Deprivation Affecting Older People Index (IDAOPI).
 }
 \details{
-The dataset contains Ministry of Housing, Communities and Local Government (MHCLG) IoD data,
-provided in a '\href{https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html}{tidy data}' format.
-Contains public sector information licensed under the \href{https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/?utm_source=copilot.com}{Open Government Licence v3.0}.
+The data has been extracted from the All scores, ranks and deciles source file and transformed into into a long ('tidy') format.
 }
 \keyword{datasets}
