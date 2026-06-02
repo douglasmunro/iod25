@@ -1,0 +1,16 @@
+---
+title: "Introduction to iod25"
+vignette: >
+  %\VignetteIndexEntry{iod25}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
+---
+
+```{r}
+#| label: setup
+library(iod25)
+```
