@@ -1,6 +1,6 @@
 path <- "./data-raw/2025_all_iod_scores_ranks_deciles.csv"
 
-supplementary25 <- vroom::vroom(
+supplementary <- vroom::vroom(
   path,
   col_select = c("lsoa_code":"local_authority_district_name", "idaci_score":"idaopi_decile"),
   .name_repair = janitor::make_clean_names,
@@ -29,4 +29,4 @@ supplementary25 <- vroom::vroom(
   ) |>
   dplyr::relocate("score", .after = "decile")
 
-usethis::use_data(supplementary25, overwrite = TRUE)
+usethis::use_data(supplementary, overwrite = TRUE)

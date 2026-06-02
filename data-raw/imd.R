@@ -1,6 +1,6 @@
 path <- "./data-raw/2025_all_iod_scores_ranks_deciles.csv"
 
-imd25 <- vroom::vroom(
+imd <- vroom::vroom(
   path,
   col_select = c(
     dplyr::starts_with("LSOA"),
@@ -26,4 +26,4 @@ imd25 <- vroom::vroom(
   ) |>
   dplyr::relocate("score", .after = "decile")
 
-usethis::use_data(imd25, overwrite = TRUE, compress = "xz")
+usethis::use_data(imd, overwrite = TRUE, compress = "xz")
