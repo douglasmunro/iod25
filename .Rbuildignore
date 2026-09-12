@@ -9,3 +9,4 @@
 ^\.github$
 ^vignettes/\.quarto$
 ^vignettes/*_files$
+^cran-comments\.md$
