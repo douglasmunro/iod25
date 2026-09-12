@@ -4,8 +4,7 @@ Version: 1.0.0
 Authors@R: 
     person("Douglas", "Munro", , "douglas@douglasmunro.co.uk", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0005-6533-6423"))
-Description: Data package containing the Indices of Deprivation 2025
-    (IoD25). Iod25 provide a set of relative measures of deprivation for
+Description: Set of relative measures of deprivation for
     small areas (Lower-layer Super Output Areas) across England.
 License: CC BY 4.0
 URL: https://douglasmunro.github.io/iod25/
