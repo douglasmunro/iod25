@@ -192,7 +192,7 @@ citation("iod25")
 #> To cite package 'iod25' in publications use:
 #> 
 #>   Munro D (2026). _iod25: English Indices of Deprivation (IoD25)_. R
-#>   package version 0.0.0.9006, <https://douglasmunro.github.io/iod25/>.
+#>   package version 1.0.0, <https://douglasmunro.github.io/iod25/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -200,7 +200,7 @@ citation("iod25")
 #>     title = {iod25: English Indices of Deprivation (IoD25)},
 #>     author = {Douglas Munro},
 #>     year = {2026},
-#>     note = {R package version 0.0.0.9006},
+#>     note = {R package version 1.0.0},
 #>     url = {https://douglasmunro.github.io/iod25/},
 #>   }
 ```
