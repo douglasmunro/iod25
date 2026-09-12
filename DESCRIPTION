@@ -16,8 +16,8 @@ Depends:
 Suggests: 
     spelling,
     tibble
+Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 8.0.0
