@@ -1,0 +1,113 @@
+---
+title: "Introduction to iod25"
+vignette: >
+  %\VignetteIndexEntry{iod25}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
+---
+
+The `iod25` R package contains three core datasets and two additional datasets. This introductory vignette provides an overview of these datasets, and how they might be used either separately or together for analysing the Indices of Deprivation 2025 (IoD25).
+
+```{r}
+#| label: setup
+#| warning: false
+#| message: false
+library(iod25)
+library(dplyr)
+```
+
+## About the data
+
+The Indices of Deprivation 2025 (IoD25) measure relative deprivation across small geographic areas in England.
+
+IoD25 is formed from 7 domains which measure different aspects of deprivation, one combined Index of Multiple Deprivation (IMD) and 2 supplementary indices.
+
+## Core datasets
+
+The core datasets are made up of:
+
+`iod25::domains` which contains the 7 domain measures; 
+
+```{r}
+#| label: domains
+glimpse(domains)
+```
+
+`iod25::imd` which contains the Index of Multiple Deprivation (IMD);
+
+```{r}
+#| label: imd
+glimpse(imd)
+```
+
+and `iod25::supplementary` which contains the 2 supplementary indices.
+
+```{r}
+#| label: supplementary
+glimpse(supplementary)
+```
+
+The datasets share a common design with data arranged in a long format with a row for each combination of Lower Layer Super Output Area (LSOA) and measure. 
+
+This common design includes shared column names across the three data sets (and `iod25::subdomains`), which allows them to joined with ease.
+
+```{r}
+#| label: bind rows
+bind_rows(domains, imd, supplementary) |>
+  glimpse()
+```
+
+## Additional datasets
+
+The two additional datasets are:
+
+`iod25::subdomains` which contains the underlying measures used to construct the
+  domains;
+
+```{r}
+#| label: subdomains
+glimpse(subdomains)
+```
+
+and `iod25::populations` which contains the population denominators used to construct the indices.
+
+```{r}
+#| label: population
+glimpse(population)
+```
+
+`iod25::populations` is important when aggregating the data to a higher geographical level. For example, if we were interested in understanding how Local Authority Districts (LADs) rank by IMD score.
+
+```{r}
+#| label: lad
+# IMD requires the total population as a denominator
+total_pop <- filter(population, population_group == "Total")
+
+imd |>
+  left_join(
+    total_pop,
+    by = join_by(lsoa_code, lsoa_name, lad_code, lad_name)
+  ) |>
+  summarise(
+    score = weighted.mean(score, population),
+    .by = lad_name
+  ) |>
+  arrange(desc(score))
+```
+
+## Citation
+
+To cite the iod25 package, please use:
+
+```{r}
+citation("iod25")
+```
+
+To cite the source data, please use:
+
++ Ministry of Housing, Communities &
+Local Government (MHCLG), Indices of Multiple Deprivation 2025, (2025). Available at: [https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/](https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/) (Accessed: 25 May 2025). Licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).

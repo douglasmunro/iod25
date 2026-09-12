@@ -14,8 +14,13 @@ BugReports: https://github.com/douglasmunro/iod25/issues
 Depends: 
     R (>= 3.5)
 Suggests: 
+    dplyr,
+    knitr,
+    quarto,
     spelling,
     tibble
+VignetteBuilder: 
+    quarto
 Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
 Language: en-GB
