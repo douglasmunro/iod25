@@ -10,7 +10,7 @@ You can install iod25 from CRAN with:
 ``` r
 
 install.packages("iod25")
-#> Installing package into '/tmp/RtmpGI062j/temp_libpath103926fe2046'
+#> Installing package into '/tmp/RtmpdBKrTD/temp_libpath440968b44cf4'
 #> (as 'lib' is unspecified)
 #> Warning: package 'iod25' is not available for this version of R
 #> 
