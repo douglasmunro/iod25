@@ -8,6 +8,7 @@
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![R-CMD-check](https://github.com/douglasmunro/iod25/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/douglasmunro/iod25/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of iod25 is to provide R users with easier access to the
@@ -19,7 +20,7 @@ You can install iod25 from CRAN with:
 
 ``` r
 install.packages("iod25")
-#> Installing package into '/tmp/RtmpGI062j/temp_libpath103926fe2046'
+#> Installing package into '/tmp/RtmpdBKrTD/temp_libpath440968b44cf4'
 #> (as 'lib' is unspecified)
 #> Warning: package 'iod25' is not available for this version of R
 #> 
