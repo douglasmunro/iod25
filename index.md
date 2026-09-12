@@ -54,19 +54,20 @@ To cite the iod25 package, please use:
 ``` r
 
 citation("iod25")
+#> Warning in citation("iod25"): could not determine year for 'iod25' from package
+#> DESCRIPTION file
 #> To cite package 'iod25' in publications use:
 #> 
-#>   Munro D (2026). _iod25: English Indices of Deprivation (IoD25)_. R
-#>   package version 0.0.0.9006, <https://github.com/douglasmunro/iod25>.
+#>   Munro D (????). _iod25: English Indices of Deprivation (IoD25)_. R
+#>   package version 0.0.0.9006, <https://douglasmunro.github.io/iod25/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {iod25: English Indices of Deprivation (IoD25)},
 #>     author = {Douglas Munro},
-#>     year = {2026},
 #>     note = {R package version 0.0.0.9006},
-#>     url = {https://github.com/douglasmunro/iod25},
+#>     url = {https://douglasmunro.github.io/iod25/},
 #>   }
 ```
 
