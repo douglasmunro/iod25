@@ -27,6 +27,7 @@ The goal of iod25 is to provide R users with easier access to the English Indice
 You can install iod25 from CRAN with:
 
 ```{r}
+#| eval: false
 install.packages("iod25")
 ```
 

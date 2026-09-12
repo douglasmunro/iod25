@@ -20,13 +20,6 @@ You can install iod25 from CRAN with:
 
 ``` r
 install.packages("iod25")
-#> Installing package into '/tmp/RtmpdBKrTD/temp_libpath440968b44cf4'
-#> (as 'lib' is unspecified)
-#> Warning: package 'iod25' is not available for this version of R
-#> 
-#> A version of this package for your version of R might be available elsewhere,
-#> see the ideas at
-#> https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
 ```
 
 ## About the data
@@ -76,14 +69,14 @@ citation("iod25")
 #> To cite package 'iod25' in publications use:
 #> 
 #>   Munro D (????). _iod25: English Indices of Deprivation (IoD25)_. R
-#>   package version 0.0.0.9006, <https://douglasmunro.github.io/iod25/>.
+#>   package version 1.0.0, <https://douglasmunro.github.io/iod25/>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
 #>     title = {iod25: English Indices of Deprivation (IoD25)},
 #>     author = {Douglas Munro},
-#>     note = {R package version 0.0.0.9006},
+#>     note = {R package version 1.0.0},
 #>     url = {https://douglasmunro.github.io/iod25/},
 #>   }
 ```
