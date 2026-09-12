@@ -23,9 +23,10 @@ The goal of iod25 is to provide R users with easier access to the English Indice
 
 ## Installation
 
-``` r
-# install.packages("pak")
-pak::pak("douglasmunro/iod25")
+You can install iod25 from CRAN with:
+
+```{r}
+install.packages("iod25")
 ```
 
 ## About the data
