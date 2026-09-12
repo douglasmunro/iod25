@@ -1,4 +1,4 @@
-# Introduction to iod25
+# iod25
 
 The `iod25` R package contains three core datasets and two additional
 datasets. This introductory vignette provides an overview of these

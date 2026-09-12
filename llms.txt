@@ -99,5 +99,4 @@ To cite the source data, please use:
 
 ### All vignettes
 
-- [Introduction to
-  iod25](https://douglasmunro.github.io/iod25/articles/iod25.md):
+- [iod25](https://douglasmunro.github.io/iod25/articles/iod25.md):

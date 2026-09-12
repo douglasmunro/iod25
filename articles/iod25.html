@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Introduction to iod25 • iod25</title>
+<title>iod25 • iod25</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -15,10 +15,7 @@
 <link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><script src="iod25_files/libs/quarto-html/popper.min.js"></script><script src="iod25_files/libs/quarto-html/tippy.umd.min.js"></script><link href="iod25_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="iod25_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to iod25">
-<meta property="og:image" content="https://douglasmunro.github.io/iod25/logo.png">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="iod25">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -51,137 +48,143 @@
 
 
   </div>
-</nav><div class="container template-quarto">
+</nav><div class="container template-article">
+
+
+
+
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>Introduction to iod25</h1>
-
-
-
-
-      <small class="dont-index">Source: <a href="https://github.com/douglasmunro/iod25/blob/main/vignettes/iod25.qmd" class="external-link"><code>vignettes/iod25.qmd</code></a></small>
-      <div class="d-none name"><code></code></div>
+      <img src="../logo.png" class="logo" alt=""><h1>iod25</h1>
+            
+      
+      <small class="dont-index">Source: <a href="https://github.com/douglasmunro/iod25/blob/main/vignettes/iod25.Rmd" class="external-link"><code>vignettes/iod25.Rmd</code></a></small>
+      <div class="d-none name"><code>iod25.Rmd</code></div>
     </div>
 
-
-
-
-
-
-    <p>The <code>iod25</code> R package contains three core datasets and two additional datasets. This introductory vignette provides an overview of these datasets, and how they might be used either separately or together for analysing the Indices of Deprivation 2025 (IoD25).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="downlit sourceCode r">
+    
+    
+<p>The <code>iod25</code> R package contains three core datasets and two
+additional datasets. This introductory vignette provides an overview of
+these datasets, and how they might be used either separately or together
+for analysing the Indices of Deprivation 2025 (IoD25).</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://douglasmunro.github.io/iod25/">iod25</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span></code></pre></div>
-</div>
-<section class="level2"><h2 id="about-the-data">About the data<a class="anchor" aria-label="anchor" href="#about-the-data"></a>
+<div class="section level2">
+<h2 id="about-the-data">About the data<a class="anchor" aria-label="anchor" href="#about-the-data"></a>
 </h2>
-<p>The Indices of Deprivation 2025 (IoD25) measure relative deprivation across small geographic areas in England.</p>
-<p>IoD25 is formed from 7 domains which measure different aspects of deprivation, one combined Index of Multiple Deprivation (IMD) and 2 supplementary indices.</p>
-</section><section class="level2"><h2 id="core-datasets">Core datasets<a class="anchor" aria-label="anchor" href="#core-datasets"></a>
+<p>The Indices of Deprivation 2025 (IoD25) measure relative deprivation
+across small geographic areas in England.</p>
+<p>IoD25 is formed from 7 domains which measure different aspects of
+deprivation, one combined Index of Multiple Deprivation (IMD) and 2
+supplementary indices.</p>
+</div>
+<div class="section level2">
+<h2 id="core-datasets">Core datasets<a class="anchor" aria-label="anchor" href="#core-datasets"></a>
 </h2>
 <p>The core datasets are made up of:</p>
 <p><code><a href="../reference/domains.html">iod25::domains</a></code> which contains the 7 domain measures;</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">domains</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 270,040</span></span>
 <span><span class="co">#&gt; Columns: 9</span></span>
-<span><span class="co">#&gt; $ lsoa_code    &lt;chr&gt; "E01000001", "E01000001", "E01000001", "E01000001", "E010…</span></span>
-<span><span class="co">#&gt; $ lsoa_name    &lt;chr&gt; "City of London 001A", "City of London 001A", "City of Lo…</span></span>
-<span><span class="co">#&gt; $ lad_code     &lt;chr&gt; "E09000001", "E09000001", "E09000001", "E09000001", "E090…</span></span>
-<span><span class="co">#&gt; $ lad_name     &lt;chr&gt; "City of London", "City of London", "City of London", "Ci…</span></span>
-<span><span class="co">#&gt; $ measure_type &lt;fct&gt; index, index, index, index, index, index, index, index, i…</span></span>
-<span><span class="co">#&gt; $ measure_name &lt;chr&gt; "Index of Multiple Deprivation", "Income Deprivation", "E…</span></span>
-<span><span class="co">#&gt; $ rank         &lt;int&gt; 26525, 33730, 33708, 33755, 33108, 33698, 29220, 244, 312…</span></span>
-<span><span class="co">#&gt; $ decile       &lt;int&gt; 8, 10, 10, 10, 10, 10, 9, 1, 10, 10, 10, 10, 10, 10, 10, …</span></span>
-<span><span class="co">#&gt; $ score        &lt;dbl&gt; 8.742, 0.013, 0.014, 0.004, -1.771, -2.220, 10.950, 69.34…</span></span></code></pre></div>
-</div>
-<p><code><a href="../reference/imd.html">iod25::imd</a></code> which contains the Index of Multiple Deprivation (IMD);</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="downlit sourceCode r">
+<span><span class="co">#&gt; $ lsoa_code    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E010…</span></span>
+<span><span class="co">#&gt; $ lsoa_name    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London 001A"<span style="color: #949494;">, </span>"City of London 001A"<span style="color: #949494;">, </span>"City of Lo…</span></span>
+<span><span class="co">#&gt; $ lad_code     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E090…</span></span>
+<span><span class="co">#&gt; $ lad_name     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"Ci…</span></span>
+<span><span class="co">#&gt; $ measure_type <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>i…</span></span>
+<span><span class="co">#&gt; $ measure_name <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Index of Multiple Deprivation"<span style="color: #949494;">, </span>"Income Deprivation"<span style="color: #949494;">, </span>"E…</span></span>
+<span><span class="co">#&gt; $ rank         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 26525<span style="color: #949494;">, </span>33730<span style="color: #949494;">, </span>33708<span style="color: #949494;">, </span>33755<span style="color: #949494;">, </span>33108<span style="color: #949494;">, </span>33698<span style="color: #949494;">, </span>29220<span style="color: #949494;">, </span>244<span style="color: #949494;">, </span>312…</span></span>
+<span><span class="co">#&gt; $ decile       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 8<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>9<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>…</span></span>
+<span><span class="co">#&gt; $ score        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 8.742<span style="color: #949494;">, </span>0.013<span style="color: #949494;">, </span>0.014<span style="color: #949494;">, </span>0.004<span style="color: #949494;">, </span>-1.771<span style="color: #949494;">, </span>-2.220<span style="color: #949494;">, </span>10.950<span style="color: #949494;">, </span>69.34…</span></span></code></pre></div>
+<p><code><a href="../reference/imd.html">iod25::imd</a></code> which contains the Index of Multiple
+Deprivation (IMD);</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">imd</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 33,755</span></span>
 <span><span class="co">#&gt; Columns: 9</span></span>
-<span><span class="co">#&gt; $ lsoa_code    &lt;chr&gt; "E01000001", "E01000002", "E01000003", "E01000005", "E010…</span></span>
-<span><span class="co">#&gt; $ lsoa_name    &lt;chr&gt; "City of London 001A", "City of London 001B", "City of Lo…</span></span>
-<span><span class="co">#&gt; $ lad_code     &lt;chr&gt; "E09000001", "E09000001", "E09000001", "E09000001", "E090…</span></span>
-<span><span class="co">#&gt; $ lad_name     &lt;chr&gt; "City of London", "City of London", "City of London", "Ci…</span></span>
-<span><span class="co">#&gt; $ measure_type &lt;fct&gt; index, index, index, index, index, index, index, index, i…</span></span>
-<span><span class="co">#&gt; $ measure_name &lt;chr&gt; "IMD", "IMD", "IMD", "IMD", "IMD", "IMD", "IMD", "IMD", "…</span></span>
-<span><span class="co">#&gt; $ rank         &lt;int&gt; 26525, 31203, 25913, 14807, 10917, 5377, 4400, 4812, 5535…</span></span>
-<span><span class="co">#&gt; $ decile       &lt;int&gt; 8, 10, 8, 5, 4, 2, 2, 2, 2, 2, 3, 3, 3, 4, 3, 3, 3, 3, 2,…</span></span>
-<span><span class="co">#&gt; $ score        &lt;dbl&gt; 8.742, 4.722, 9.250, 19.884, 25.307, 37.217, 40.726, 39.1…</span></span></code></pre></div>
-</div>
-<p>and <code><a href="../reference/supplementary.html">iod25::supplementary</a></code> which contains the 2 supplementary indices.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
+<span><span class="co">#&gt; $ lsoa_code    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E01000001"<span style="color: #949494;">, </span>"E01000002"<span style="color: #949494;">, </span>"E01000003"<span style="color: #949494;">, </span>"E01000005"<span style="color: #949494;">, </span>"E010…</span></span>
+<span><span class="co">#&gt; $ lsoa_name    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London 001A"<span style="color: #949494;">, </span>"City of London 001B"<span style="color: #949494;">, </span>"City of Lo…</span></span>
+<span><span class="co">#&gt; $ lad_code     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E090…</span></span>
+<span><span class="co">#&gt; $ lad_name     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"Ci…</span></span>
+<span><span class="co">#&gt; $ measure_type <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>i…</span></span>
+<span><span class="co">#&gt; $ measure_name <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "IMD"<span style="color: #949494;">, </span>"IMD"<span style="color: #949494;">, </span>"IMD"<span style="color: #949494;">, </span>"IMD"<span style="color: #949494;">, </span>"IMD"<span style="color: #949494;">, </span>"IMD"<span style="color: #949494;">, </span>"IMD"<span style="color: #949494;">, </span>"IMD"<span style="color: #949494;">, </span>"…</span></span>
+<span><span class="co">#&gt; $ rank         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 26525<span style="color: #949494;">, </span>31203<span style="color: #949494;">, </span>25913<span style="color: #949494;">, </span>14807<span style="color: #949494;">, </span>10917<span style="color: #949494;">, </span>5377<span style="color: #949494;">, </span>4400<span style="color: #949494;">, </span>4812<span style="color: #949494;">, </span>5535…</span></span>
+<span><span class="co">#&gt; $ decile       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 8<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>8<span style="color: #949494;">, </span>5<span style="color: #949494;">, </span>4<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>4<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>2<span style="color: #949494;">,</span>…</span></span>
+<span><span class="co">#&gt; $ score        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 8.742<span style="color: #949494;">, </span>4.722<span style="color: #949494;">, </span>9.250<span style="color: #949494;">, </span>19.884<span style="color: #949494;">, </span>25.307<span style="color: #949494;">, </span>37.217<span style="color: #949494;">, </span>40.726<span style="color: #949494;">, </span>39.1…</span></span></code></pre></div>
+<p>and <code><a href="../reference/supplementary.html">iod25::supplementary</a></code> which contains the 2
+supplementary indices.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">supplementary</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 67,510</span></span>
 <span><span class="co">#&gt; Columns: 9</span></span>
-<span><span class="co">#&gt; $ lsoa_code    &lt;chr&gt; "E01000001", "E01000001", "E01000002", "E01000002", "E010…</span></span>
-<span><span class="co">#&gt; $ lsoa_name    &lt;chr&gt; "City of London 001A", "City of London 001A", "City of Lo…</span></span>
-<span><span class="co">#&gt; $ lad_code     &lt;chr&gt; "E09000001", "E09000001", "E09000001", "E09000001", "E090…</span></span>
-<span><span class="co">#&gt; $ lad_name     &lt;chr&gt; "City of London", "City of London", "City of London", "Ci…</span></span>
-<span><span class="co">#&gt; $ measure_type &lt;fct&gt; index, index, index, index, index, index, index, index, i…</span></span>
-<span><span class="co">#&gt; $ measure_name &lt;chr&gt; "IDACI", "IDAOPI", "IDACI", "IDAOPI", "IDACI", "IDAOPI", …</span></span>
-<span><span class="co">#&gt; $ rank         &lt;int&gt; 33304, 33721, 31744, 33118, 19647, 16506, 9604, 912, 3669…</span></span>
-<span><span class="co">#&gt; $ decile       &lt;int&gt; 10, 10, 10, 10, 6, 5, 3, 1, 2, 5, 2, 1, 2, 1, 2, 2, 2, 1,…</span></span>
-<span><span class="co">#&gt; $ score        &lt;dbl&gt; 0.039, 0.012, 0.076, 0.026, 0.250, 0.153, 0.459, 0.625, 0…</span></span></code></pre></div>
-</div>
-<p>The datasets share a common design with data arranged in a long format with a row for each combination of Lower Layer Super Output Area (LSOA) and measure.</p>
-<p>This common design includes shared column names across the three data sets (and <code><a href="../reference/subdomains.html">iod25::subdomains</a></code>), which allows them to joined with ease.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="downlit sourceCode r">
+<span><span class="co">#&gt; $ lsoa_code    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E01000002"<span style="color: #949494;">, </span>"E01000002"<span style="color: #949494;">, </span>"E010…</span></span>
+<span><span class="co">#&gt; $ lsoa_name    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London 001A"<span style="color: #949494;">, </span>"City of London 001A"<span style="color: #949494;">, </span>"City of Lo…</span></span>
+<span><span class="co">#&gt; $ lad_code     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E090…</span></span>
+<span><span class="co">#&gt; $ lad_name     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"Ci…</span></span>
+<span><span class="co">#&gt; $ measure_type <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>i…</span></span>
+<span><span class="co">#&gt; $ measure_name <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "IDACI"<span style="color: #949494;">, </span>"IDAOPI"<span style="color: #949494;">, </span>"IDACI"<span style="color: #949494;">, </span>"IDAOPI"<span style="color: #949494;">, </span>"IDACI"<span style="color: #949494;">, </span>"IDAOPI"<span style="color: #949494;">, </span>…</span></span>
+<span><span class="co">#&gt; $ rank         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 33304<span style="color: #949494;">, </span>33721<span style="color: #949494;">, </span>31744<span style="color: #949494;">, </span>33118<span style="color: #949494;">, </span>19647<span style="color: #949494;">, </span>16506<span style="color: #949494;">, </span>9604<span style="color: #949494;">, </span>912<span style="color: #949494;">, </span>3669…</span></span>
+<span><span class="co">#&gt; $ decile       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>6<span style="color: #949494;">, </span>5<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>5<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>1<span style="color: #949494;">,</span>…</span></span>
+<span><span class="co">#&gt; $ score        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 0.039<span style="color: #949494;">, </span>0.012<span style="color: #949494;">, </span>0.076<span style="color: #949494;">, </span>0.026<span style="color: #949494;">, </span>0.250<span style="color: #949494;">, </span>0.153<span style="color: #949494;">, </span>0.459<span style="color: #949494;">, </span>0.625<span style="color: #949494;">, </span>0…</span></span></code></pre></div>
+<p>The datasets share a common design with data arranged in a long
+format with a row for each combination of Lower Layer Super Output Area
+(LSOA) and measure.</p>
+<p>This common design includes shared column names across the three data
+sets (and <code><a href="../reference/subdomains.html">iod25::subdomains</a></code>), which allows them to joined
+with ease.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="va">domains</span>, <span class="va">imd</span>, <span class="va">supplementary</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 371,305</span></span>
 <span><span class="co">#&gt; Columns: 9</span></span>
-<span><span class="co">#&gt; $ lsoa_code    &lt;chr&gt; "E01000001", "E01000001", "E01000001", "E01000001", "E010…</span></span>
-<span><span class="co">#&gt; $ lsoa_name    &lt;chr&gt; "City of London 001A", "City of London 001A", "City of Lo…</span></span>
-<span><span class="co">#&gt; $ lad_code     &lt;chr&gt; "E09000001", "E09000001", "E09000001", "E09000001", "E090…</span></span>
-<span><span class="co">#&gt; $ lad_name     &lt;chr&gt; "City of London", "City of London", "City of London", "Ci…</span></span>
-<span><span class="co">#&gt; $ measure_type &lt;fct&gt; index, index, index, index, index, index, index, index, i…</span></span>
-<span><span class="co">#&gt; $ measure_name &lt;chr&gt; "Index of Multiple Deprivation", "Income Deprivation", "E…</span></span>
-<span><span class="co">#&gt; $ rank         &lt;int&gt; 26525, 33730, 33708, 33755, 33108, 33698, 29220, 244, 312…</span></span>
-<span><span class="co">#&gt; $ decile       &lt;int&gt; 8, 10, 10, 10, 10, 10, 9, 1, 10, 10, 10, 10, 10, 10, 10, …</span></span>
-<span><span class="co">#&gt; $ score        &lt;dbl&gt; 8.742, 0.013, 0.014, 0.004, -1.771, -2.220, 10.950, 69.34…</span></span></code></pre></div>
+<span><span class="co">#&gt; $ lsoa_code    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E010…</span></span>
+<span><span class="co">#&gt; $ lsoa_name    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London 001A"<span style="color: #949494;">, </span>"City of London 001A"<span style="color: #949494;">, </span>"City of Lo…</span></span>
+<span><span class="co">#&gt; $ lad_code     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E090…</span></span>
+<span><span class="co">#&gt; $ lad_name     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"Ci…</span></span>
+<span><span class="co">#&gt; $ measure_type <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>index<span style="color: #949494;">, </span>i…</span></span>
+<span><span class="co">#&gt; $ measure_name <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Index of Multiple Deprivation"<span style="color: #949494;">, </span>"Income Deprivation"<span style="color: #949494;">, </span>"E…</span></span>
+<span><span class="co">#&gt; $ rank         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 26525<span style="color: #949494;">, </span>33730<span style="color: #949494;">, </span>33708<span style="color: #949494;">, </span>33755<span style="color: #949494;">, </span>33108<span style="color: #949494;">, </span>33698<span style="color: #949494;">, </span>29220<span style="color: #949494;">, </span>244<span style="color: #949494;">, </span>312…</span></span>
+<span><span class="co">#&gt; $ decile       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 8<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>9<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>…</span></span>
+<span><span class="co">#&gt; $ score        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 8.742<span style="color: #949494;">, </span>0.013<span style="color: #949494;">, </span>0.014<span style="color: #949494;">, </span>0.004<span style="color: #949494;">, </span>-1.771<span style="color: #949494;">, </span>-2.220<span style="color: #949494;">, </span>10.950<span style="color: #949494;">, </span>69.34…</span></span></code></pre></div>
 </div>
-</section><section class="level2"><h2 id="additional-datasets">Additional datasets<a class="anchor" aria-label="anchor" href="#additional-datasets"></a>
+<div class="section level2">
+<h2 id="additional-datasets">Additional datasets<a class="anchor" aria-label="anchor" href="#additional-datasets"></a>
 </h2>
 <p>The two additional datasets are:</p>
-<p><code><a href="../reference/subdomains.html">iod25::subdomains</a></code> which contains the underlying measures used to construct the domains;</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="downlit sourceCode r">
+<p><code><a href="../reference/subdomains.html">iod25::subdomains</a></code> which contains the underlying measures
+used to construct the domains;</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">subdomains</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 202,530</span></span>
 <span><span class="co">#&gt; Columns: 9</span></span>
-<span><span class="co">#&gt; $ lsoa_code    &lt;chr&gt; "E01000001", "E01000001", "E01000001", "E01000001", "E010…</span></span>
-<span><span class="co">#&gt; $ lsoa_name    &lt;chr&gt; "City of London 001A", "City of London 001A", "City of Lo…</span></span>
-<span><span class="co">#&gt; $ lad_code     &lt;chr&gt; "E09000001", "E09000001", "E09000001", "E09000001", "E090…</span></span>
-<span><span class="co">#&gt; $ lad_name     &lt;chr&gt; "City of London", "City of London", "City of London", "Ci…</span></span>
-<span><span class="co">#&gt; $ measure_type &lt;fct&gt; subdomain, subdomain, subdomain, subdomain, subdomain, su…</span></span>
-<span><span class="co">#&gt; $ measure_name &lt;chr&gt; "Children And Young People", "Adult Skills", "Geographica…</span></span>
-<span><span class="co">#&gt; $ rank         &lt;int&gt; 33752, 33749, 33560, 12832, 1105, 1586, 33266, 33747, 336…</span></span>
-<span><span class="co">#&gt; $ decile       &lt;int&gt; 10, 10, 10, 4, 1, 1, 10, 10, 10, 6, 3, 1, 9, 10, 10, 5, 4…</span></span>
-<span><span class="co">#&gt; $ score        &lt;dbl&gt; -2.902, 0.030, 4.437, 0.688, 1.207, 1.414, -1.830, 0.032,…</span></span></code></pre></div>
-</div>
-<p>and <code>iod25::populations</code> which contains the population denominators used to construct the indices.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="downlit sourceCode r">
+<span><span class="co">#&gt; $ lsoa_code    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E010…</span></span>
+<span><span class="co">#&gt; $ lsoa_name    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London 001A"<span style="color: #949494;">, </span>"City of London 001A"<span style="color: #949494;">, </span>"City of Lo…</span></span>
+<span><span class="co">#&gt; $ lad_code     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E090…</span></span>
+<span><span class="co">#&gt; $ lad_name     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"Ci…</span></span>
+<span><span class="co">#&gt; $ measure_type <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> subdomain<span style="color: #949494;">, </span>subdomain<span style="color: #949494;">, </span>subdomain<span style="color: #949494;">, </span>subdomain<span style="color: #949494;">, </span>subdomain<span style="color: #949494;">, </span>su…</span></span>
+<span><span class="co">#&gt; $ measure_name <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Children And Young People"<span style="color: #949494;">, </span>"Adult Skills"<span style="color: #949494;">, </span>"Geographica…</span></span>
+<span><span class="co">#&gt; $ rank         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 33752<span style="color: #949494;">, </span>33749<span style="color: #949494;">, </span>33560<span style="color: #949494;">, </span>12832<span style="color: #949494;">, </span>1105<span style="color: #949494;">, </span>1586<span style="color: #949494;">, </span>33266<span style="color: #949494;">, </span>33747<span style="color: #949494;">, </span>336…</span></span>
+<span><span class="co">#&gt; $ decile       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>4<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>6<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>9<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>5<span style="color: #949494;">, </span>4…</span></span>
+<span><span class="co">#&gt; $ score        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> -2.902<span style="color: #949494;">, </span>0.030<span style="color: #949494;">, </span>4.437<span style="color: #949494;">, </span>0.688<span style="color: #949494;">, </span>1.207<span style="color: #949494;">, </span>1.414<span style="color: #949494;">, </span>-1.830<span style="color: #949494;">, </span>0.032<span style="color: #949494;">,</span>…</span></span></code></pre></div>
+<p>and <code>iod25::populations</code> which contains the population
+denominators used to construct the indices.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">population</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 135,020</span></span>
 <span><span class="co">#&gt; Columns: 6</span></span>
-<span><span class="co">#&gt; $ lsoa_code        &lt;chr&gt; "E01000001", "E01000001", "E01000001", "E01000001", "…</span></span>
-<span><span class="co">#&gt; $ lsoa_name        &lt;chr&gt; "City of London 001A", "City of London 001A", "City o…</span></span>
-<span><span class="co">#&gt; $ lad_code         &lt;chr&gt; "E09000001", "E09000001", "E09000001", "E09000001", "…</span></span>
-<span><span class="co">#&gt; $ lad_name         &lt;chr&gt; "City of London", "City of London", "City of London",…</span></span>
-<span><span class="co">#&gt; $ population_group &lt;fct&gt; Total, Older (60+), Working age (18-66), Dependent ch…</span></span>
-<span><span class="co">#&gt; $ population       &lt;int&gt; 1795, 520, 1248, 149, 1671, 387, 1324, 81, 1896, 432,…</span></span></code></pre></div>
-</div>
-<p><code>iod25::populations</code> is important when aggregating the data to a higher geographical level. For example, if we were interested in understanding how Local Authority Districts (LADs) rank by IMD score.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="downlit sourceCode r">
+<span><span class="co">#&gt; $ lsoa_code        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"E01000001"<span style="color: #949494;">, </span>"…</span></span>
+<span><span class="co">#&gt; $ lsoa_name        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London 001A"<span style="color: #949494;">, </span>"City of London 001A"<span style="color: #949494;">, </span>"City o…</span></span>
+<span><span class="co">#&gt; $ lad_code         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"E09000001"<span style="color: #949494;">, </span>"…</span></span>
+<span><span class="co">#&gt; $ lad_name         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">, </span>"City of London"<span style="color: #949494;">,</span>…</span></span>
+<span><span class="co">#&gt; $ population_group <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> Total<span style="color: #949494;">, </span>Older (60+)<span style="color: #949494;">, </span>Working age (18-66)<span style="color: #949494;">, </span>Dependent ch…</span></span>
+<span><span class="co">#&gt; $ population       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1795<span style="color: #949494;">, </span>520<span style="color: #949494;">, </span>1248<span style="color: #949494;">, </span>149<span style="color: #949494;">, </span>1671<span style="color: #949494;">, </span>387<span style="color: #949494;">, </span>1324<span style="color: #949494;">, </span>81<span style="color: #949494;">, </span>1896<span style="color: #949494;">, </span>432<span style="color: #949494;">,</span>…</span></span></code></pre></div>
+<p><code>iod25::populations</code> is important when aggregating the
+data to a higher geographical level. For example, if we were interested
+in understanding how Local Authority Districts (LADs) rank by IMD
+score.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># IMD requires the total population as a denominator</span></span>
 <span><span class="va">total_pop</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">population</span>, <span class="va">population_group</span> <span class="op">==</span> <span class="st">"Total"</span><span class="op">)</span></span>
 <span></span>
@@ -195,26 +198,26 @@
 <span>    .by <span class="op">=</span> <span class="va">lad_name</span></span>
 <span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html" class="external-link">desc</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 296 × 2</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 296 × 2</span></span></span>
 <span><span class="co">#&gt;    lad_name                    score</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;                       &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt;  1 Blackpool                    43.5</span></span>
-<span><span class="co">#&gt;  2 Middlesbrough                40.0</span></span>
-<span><span class="co">#&gt;  3 Burnley                      38.7</span></span>
-<span><span class="co">#&gt;  4 Manchester                   38.7</span></span>
-<span><span class="co">#&gt;  5 Birmingham                   38.1</span></span>
-<span><span class="co">#&gt;  6 Hartlepool                   37.6</span></span>
-<span><span class="co">#&gt;  7 Hastings                     37.3</span></span>
-<span><span class="co">#&gt;  8 Kingston upon Hull, City of  37.2</span></span>
-<span><span class="co">#&gt;  9 Liverpool                    37.1</span></span>
-<span><span class="co">#&gt; 10 Blackburn with Darwen        36.9</span></span>
-<span><span class="co">#&gt; # ℹ 286 more rows</span></span></code></pre></div>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Blackpool                    43.5</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Middlesbrough                40.0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Burnley                      38.7</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Manchester                   38.7</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Birmingham                   38.1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Hartlepool                   37.6</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Hastings                     37.3</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Kingston upon Hull, City of  37.2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Liverpool                    37.1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Blackburn with Darwen        36.9</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 286 more rows</span></span></span></code></pre></div>
 </div>
-</section><section class="level2"><h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
+<div class="section level2">
+<h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
 <p>To cite the iod25 package, please use:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"iod25"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; To cite package 'iod25' in publications use:</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -230,96 +233,18 @@
 <span><span class="co">#&gt;     note = {R package version 1.0.0},</span></span>
 <span><span class="co">#&gt;     url = {https://douglasmunro.github.io/iod25/},</span></span>
 <span><span class="co">#&gt;   }</span></span></code></pre></div>
-</div>
 <p>To cite the source data, please use:</p>
 <ul>
-<li>Ministry of Housing, Communities &amp; Local Government (MHCLG), Indices of Multiple Deprivation 2025, (2025). Available at: <a href="https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/" class="external-link">https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/</a> (Accessed: 25 May 2025). Licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="external-link">Open Government Licence v3.0</a>.</li>
-</ul></section><script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'light-border',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config);
-    }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
-        });
-      }
-    }
-  });
-  </script></main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+<li>Ministry of Housing, Communities &amp; Local Government (MHCLG),
+Indices of Multiple Deprivation 2025, (2025). Available at: <a href="https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/" class="external-link">https://open-data.communities.gov.uk/datasets/indices-of-deprivation-2025/</a>
+(Accessed: 25 May 2025). Licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="external-link">Open
+Government Licence v3.0</a>.</li>
+</ul>
+</div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
+
 
 
     <footer><div class="pkgdown-footer-left">
