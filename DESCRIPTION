@@ -15,11 +15,11 @@ Depends:
 Suggests: 
     dplyr,
     knitr,
-    quarto,
+    rmarkdown,
     spelling,
     tibble
 VignetteBuilder: 
-    quarto
+    knitr
 Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
 Language: en-GB

@@ -1,21 +1,25 @@
 ---
-title: "Introduction to iod25"
+title: "iod25"
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{iod25}
-  %\VignetteEngine{quarto::html}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-knitr:
-  opts_chunk:
-    collapse: true
-    comment: '#>'
 ---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>"
+)
+```
+
 
 The `iod25` R package contains three core datasets and two additional datasets. This introductory vignette provides an overview of these datasets, and how they might be used either separately or together for analysing the Indices of Deprivation 2025 (IoD25).
 
 ```{r}
-#| label: setup
-#| warning: false
-#| message: false
 library(iod25)
 library(dplyr)
 ```
@@ -33,21 +37,18 @@ The core datasets are made up of:
 `iod25::domains` which contains the 7 domain measures; 
 
 ```{r}
-#| label: domains
 glimpse(domains)
 ```
 
 `iod25::imd` which contains the Index of Multiple Deprivation (IMD);
 
 ```{r}
-#| label: imd
 glimpse(imd)
 ```
 
 and `iod25::supplementary` which contains the 2 supplementary indices.
 
 ```{r}
-#| label: supplementary
 glimpse(supplementary)
 ```
 
@@ -56,7 +57,6 @@ The datasets share a common design with data arranged in a long format with a ro
 This common design includes shared column names across the three data sets (and `iod25::subdomains`), which allows them to joined with ease.
 
 ```{r}
-#| label: bind rows
 bind_rows(domains, imd, supplementary) |>
   glimpse()
 ```
@@ -76,14 +76,12 @@ glimpse(subdomains)
 and `iod25::populations` which contains the population denominators used to construct the indices.
 
 ```{r}
-#| label: population
 glimpse(population)
 ```
 
 `iod25::populations` is important when aggregating the data to a higher geographical level. For example, if we were interested in understanding how Local Authority Districts (LADs) rank by IMD score.
 
 ```{r}
-#| label: lad
 # IMD requires the total population as a denominator
 total_pop <- filter(population, population_group == "Total")
 
